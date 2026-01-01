@@ -142,7 +142,8 @@ spring.profiles.active=postgres
 <p align="left">
 <img alt="Java" title="Java 17" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
 <img alt="Spring Boot" title="Spring Boot 3.2.5" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"/>
- <img align="left" alt="PostgreSQL" title="PostgreSQL" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"/>
+<img align="left" alt="PostgreSQL" title="PostgreSQL" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"/>
+<img alt="Postman" title="Postman" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"/>
 <img alt="Hibernate" title="Hibernate JPA" width="50px" src="https://img.shields.io/badge/Hibernate-JPA-blue"/>
 <img alt="Swagger" title="Swagger OpenAPI" width="50px" src="https://img.shields.io/badge/Swagger-OpenAPI-green"/>
 <img alt="JUnit5" title="JUnit 5" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg"/>
