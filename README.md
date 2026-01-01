@@ -4,7 +4,7 @@ Catálogo de livros em Java com Spring Boot, consumindo a API Gutendex e persist
 ## 🚀 Projeto Prático em Java + Spring Boot  
 ### 🗄️ JPA/Hibernate + 🌐 Swagger/OpenAPI + 🧪 Testes Unitários (JUnit 5)  
 
-![Capa do Projeto](Literalura.png)
+![Capa do Projeto](assets/Literalura.png)
 
 ---
 
