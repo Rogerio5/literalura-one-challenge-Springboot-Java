@@ -85,3 +85,93 @@ Literalura/
  │    └── AutorLivroIntegrationTest.java
  │
  └── README.md                          # Documentação
+```
+
+---
+
+## 🧪 Testes / Tests
+
+Foram implementados testes unitários e de integração cobrindo:
+
+✅ Cadastro de autores
+✅ Cadastro de livros vinculados a autores
+✅ Busca de autores e livros
+✅ Cenários de erro (autor não encontrado, livro inexistente)
+
+📌 Resultado esperado: todos os testes passam com sucesso ✅
+
+---
+
+## ▶️ Execução / Run Instructions
+PT:
+
+Usando H2 (rápido para testar Swagger)
+1. Certifique-se de que o perfil ativo é h2:
+```
+spring.profiles.active=h2
+```
+no arquivo application.properties
+
+2. Rode:
+```
+mvn clean install
+mvn spring-boot:run
+```
+
+3. Acesse:
+```
+Swagger UI: http://localhost:8080/swagger-ui/index.html
+
+OpenAPI JSON: http://localhost:8080/v3/api-docs
+```
+---
+
+## Usando PostgreSQL (persistência real)
+
+1. Configure o banco local ou Supabase.
+2. Ative o perfil postgres:
+```
+spring.profiles.active=postgres
+```
+3. spring.profiles.active=postgres
+
+---
+
+## 🧰 Tecnologias / Technologies
+
+<p align="left">
+<img alt="Java" title="Java 17" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+<img alt="Spring Boot" title="Spring Boot 3.2.5" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"/>
+<img alt="Hibernate" title="Hibernate JPA" width="50px" src="https://img.shields.io/badge/Hibernate-JPA-blue"/>
+<img alt="Swagger" title="Swagger OpenAPI" width="50px" src="https://img.shields.io/badge/Swagger-OpenAPI-green"/>
+<img alt="JUnit5" title="JUnit 5" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg"/>
+<img alt="Git" title="Git" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+<img alt="GitHub" title="GitHub" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/>
+</p>
+
+---
+
+## 👨‍💻 Desenvolvedor / Developer
+
+
+---
+
+##  📜 Licença / License
+
+Este projeto está sob licença MIT. Para mais detalhes, veja o arquivo LICENSE.
+
+This project is under the MIT license. For more details, see the LICENSE file.
+
+---
+
+## 🏁 Conclusão / Conclusion
+PT:  
+Este projeto consolida meu aprendizado em Java e Spring Boot, integrando JPA/Hibernate, consumo de banco de dados, documentação com Swagger e testes unitários. Ele demonstra boas práticas de organização de código e serve como base para projetos mais complexos.
+
+EN:  
+This project consolidates my learning in Java and Spring Boot, integrating JPA/Hibernate, database usage, Swagger documentation, and unit testing. It demonstrates good coding practices and serves as a foundation for more complex projects.
+
+
+
+
+
