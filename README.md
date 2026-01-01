@@ -155,6 +155,7 @@ spring.profiles.active=postgres
 
 ## 👨‍💻 Desenvolvedor / Developer
 
+- [Rogerio](https://github.com/Rogerio5)
 
 ---
 
