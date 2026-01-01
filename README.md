@@ -1,7 +1,5 @@
-# literalura-one-challenge-Springboot-Java
+# 📚 literalura-one-challenge-Springboot-Java
 Catálogo de livros em Java com Spring Boot, consumindo a API Gutendex e persistindo em PostgreSQL
-
-# 📚 Projeto LiterAlura – Spring Boot  
 
 ## 🚀 Projeto Prático em Java + Spring Boot  
 ### 🗄️ JPA/Hibernate + 🌐 Swagger/OpenAPI + 🧪 Testes Unitários (JUnit 5)  
