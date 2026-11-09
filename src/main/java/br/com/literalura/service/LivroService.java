@@ -1,9 +1,12 @@
 package br.com.literalura.service;
 
+import br.com.literalura.kafka.LivroCriadoEvent;
 import br.com.literalura.model.Livro;
 import br.com.literalura.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +17,21 @@ public class LivroService {
     @Autowired
     private LivroRepository repository;
 
-    public Livro salvar(Livro livro) { return repository.save(livro); }
+    @Autowired
+    private ApplicationEventPublisher eventos;
+
+    @Transactional
+    public Livro salvar(Livro livro) {
+        Livro salvo = repository.save(livro);
+
+        eventos.publishEvent(new LivroCriadoEvent(
+                salvo.getId(),
+                salvo.getTitulo(),
+                salvo.getAnoPublicacao()
+        ));
+
+        return salvo;
+    }
     public List<Livro> listarTodos() { return repository.findAll(); }
     public Optional<Livro> buscarPorId(Long id) { return repository.findById(id); }
     public Livro atualizar(Livro livro) { return repository.save(livro); }
