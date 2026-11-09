@@ -1,0 +1,94 @@
+/* LiterAlura V3.0 — Catálogo personalizado (prefixo la-, sem alterar outras telas) */
+.la-estante{padding:24px 26px 25px}
+.la-estante--compacta{padding:23px 25px}
+.la-estante__intro{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px}
+.la-estante__micro{font-size:10px;color:#b6a3fa;font-weight:800;letter-spacing:2px}
+.la-estante__intro h3{margin:8px 0 4px;color:#f1f1ff;letter-spacing:-.6px;font-size:23px;font-family:Georgia,'Times New Roman',serif}
+.la-estante__intro p{margin:0;color:#96a6c3;font-size:12px}
+.la-estante__filtro{border:1px solid #48506f;border-radius:999px;padding:10px 15px;color:#d0d5f0;background:#222c45;font-weight:700;font-size:12px;white-space:nowrap}
+.la-estante__filtro:hover,.la-estante__filtro--ativo{border-color:#a597eb;background:#342f63;color:#f2e6ff}
+.la-estante__grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(198px,1fr));gap:19px}
+.la-estante--compacta .la-estante__grade{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.la-livro{background:linear-gradient(155deg,#1b2a45,#152038);border:1px solid #364461;border-radius:17px;overflow:hidden;min-width:0;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s}
+.la-livro:hover{transform:translateY(-4px);border-color:#7769b9;box-shadow:0 16px 45px #070d1b75}
+.la-livro__visual{position:relative;display:flex;justify-content:center;padding:22px 20px 14px;background:radial-gradient(circle at 50% 0%,#47557d4a,transparent 75%)}
+.la-capa{--la-c1:#482b58;--la-c2:#101629;--la-metal:#f4cc91;position:relative;display:flex;flex-direction:column;width:145px;height:202px;padding:13px 13px 11px;overflow:hidden;isolation:isolate;border-radius:3px 8px 8px 3px;border:1px solid #e8d5a957;box-shadow:-6px 7px 17px #02061590,inset 5px 0 4px #0005,inset 9px 0 1px #ffffff14;background:linear-gradient(135deg,var(--la-c1),var(--la-c2));color:#fff;text-align:left}
+.la-capa:before{content:'';position:absolute;inset:7px;border:1px solid #dcb77f55;pointer-events:none}
+.la-capa:after{content:'';position:absolute;z-index:-1;left:-35px;top:35px;width:190px;height:190px;border:1px solid #ffffff24;border-radius:50%;box-shadow:0 0 0 25px #ffffff07,0 0 0 49px #ffffff08;transform:rotate(-18deg)}
+.la-capa--ameixa{--la-c1:#6a3965;--la-c2:#1b2039;--la-metal:#ffd59d}
+.la-capa--esmeralda{--la-c1:#1f766e;--la-c2:#0e2935;--la-metal:#e3dd98}
+.la-capa--marinho{--la-c1:#375b90;--la-c2:#151b34;--la-metal:#e9cfab}
+.la-capa--terracota{--la-c1:#a45a50;--la-c2:#342334;--la-metal:#ffe1b7}
+.la-capa--anil{--la-c1:#5659a4;--la-c2:#202341;--la-metal:#d6d1ff}
+.la-capa--grafite{--la-c1:#505c6d;--la-c2:#171e2d;--la-metal:#e7c69e}
+.la-capa__selo{font-size:8px;font-weight:900;letter-spacing:2px;color:var(--la-metal);text-align:center;z-index:1}
+.la-capa__selo span{font-weight:400;color:#fff6}
+.la-capa__emblema{flex:1;display:flex;align-items:center;justify-content:center;color:var(--la-metal);opacity:.86;letter-spacing:-4px;font-size:53px;font-family:Georgia,'Times New Roman',serif;font-weight:700;z-index:1;text-shadow:1px 2px 2px #0007}
+.la-capa__texto{min-height:62px;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.la-capa__linha{width:28px;height:2px;background:var(--la-metal);margin-bottom:1px}
+.la-capa__texto strong{font-size:12px;line-height:1.17;font-family:Georgia,'Times New Roman',serif;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.la-capa__texto>span:last-child{color:#e8e2e1;font-size:8px;letter-spacing:.15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-capa__rodape{border-top:1px solid #ffffff54;display:flex;justify-content:space-between;gap:2px;margin-top:7px;padding-top:6px;font-size:6px;color:#e6d3bc;letter-spacing:.4px}
+.la-livro__favoritar{position:absolute;right:13px;top:13px;width:33px;height:33px;border:1px solid #808aa3a3;border-radius:50%;display:grid;place-items:center;background:#101b31d8;color:#e6eaff;font-size:21px;line-height:1}
+.la-livro__favoritar--ativo{background:#513453;color:#ffbdd4;border-color:#9b658c}
+.la-livro__conteudo{display:flex;flex-direction:column;gap:7px;flex:1;padding:14px 15px 17px}
+.la-livro__selo{font-size:8px;color:#afa2ea;font-weight:800;letter-spacing:1.5px}
+.la-livro__conteudo h4{font-family:Georgia,'Times New Roman',serif;margin:0;font-size:18px;line-height:1.2;color:#f6f2ff;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.la-livro__conteudo p{font-size:12px;color:#a4afc9;margin:0;min-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-livro__meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;color:#889bb6;font-size:11px;padding:8px 0 3px}
+.la-livro__detalhes{width:100%;border-radius:9px;border:1px solid #675d9d;background:#2e2c58;color:#eeeaff;font-size:12px;font-weight:700;padding:10px 11px;text-align:center;display:flex;align-items:center;justify-content:space-between}
+.la-livro__detalhes:hover{background:#49427a;border-color:#ada1ff}
+.la-estante__aviso{color:#8493ad;font-size:11px;margin:20px 0 0;line-height:1.55}
+.la-estante__vazia{color:#9daacc;padding:32px 12px;text-align:center;font-size:13px}
+.la-modal__fundo{position:fixed;z-index:1000;inset:0;padding:22px;background:#020713d9;backdrop-filter:blur(8px);display:grid;place-items:center;overflow:auto}
+.la-modal{position:relative;display:grid;grid-template-columns:235px minmax(0,1fr);align-items:center;gap:31px;max-width:760px;width:100%;border:1px solid #576182;background:#141f35;border-radius:22px;padding:38px;box-shadow:0 25px 80px #000b}
+.la-modal__capa{display:grid;place-items:center}
+.la-capa--grande{width:205px;height:287px;padding:20px 20px 17px}
+.la-capa--grande .la-capa__selo{font-size:10px}
+.la-capa--grande .la-capa__emblema{font-size:85px}
+.la-capa--grande .la-capa__texto strong{font-size:19px}
+.la-capa--grande .la-capa__texto>span:last-child{font-size:10px}
+.la-modal__fechar{position:absolute;right:17px;top:17px;background:#26334b;border:1px solid #4a5774;color:#fafaff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+.la-modal__conteudo h2{font-size:32px;font-family:Georgia,'Times New Roman',serif;color:#f6f0fd;line-height:1.15;margin:12px 0}
+.la-modal__autor{margin:0 0 23px;color:#b6b2ca;font-size:14px}
+.la-modal__dados{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #354159;border-bottom:1px solid #354159;padding:15px 0;margin:10px 0 20px;gap:10px}
+.la-modal__dados div{display:grid;gap:5px}.la-modal__dados span{font-size:10px;color:#91a1bc}.la-modal__dados strong{font-size:17px;color:#f0e9ff}
+.la-modal__descricao{font-size:13px;color:#bdc8dc;line-height:1.8;margin:0 0 21px}
+.la-modal__buscar{display:inline-flex;align-items:center;justify-content:center;max-width:100%;font-size:12px;font-weight:800;text-decoration:none;border-radius:10px;padding:13px 16px;background:linear-gradient(110deg,#7264da,#7561c0);color:#fff}
+.la-modal__buscar:hover{filter:brightness(1.13)}
+.la-modal__conteudo small{display:block;margin-top:12px;font-size:10px;line-height:1.6;color:#8f9db5}
+.la-modal button:focus-visible,.la-modal a:focus-visible,.la-estante button:focus-visible{outline:3px solid #d5baff;outline-offset:2px}
+@media(max-width:900px){.la-estante{padding:18px}.la-estante__grade{grid-template-columns:repeat(auto-fill,minmax(172px,1fr))}.la-modal{grid-template-columns:180px 1fr;gap:25px;padding:28px}.la-capa--grande{width:176px;height:247px}}
+@media(max-width:600px){.la-estante__intro{align-items:flex-start;flex-direction:column}.la-estante__grade,.la-estante--compacta .la-estante__grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.la-livro__visual{padding:13px 7px 9px}.la-capa{width:115px;height:172px;padding:10px}.la-capa__emblema{font-size:40px}.la-capa__texto strong{font-size:11px}.la-livro__conteudo{padding:12px 10px}.la-livro__conteudo h4{font-size:15px}.la-livro__meta{font-size:9px}.la-livro__selo{font-size:7px}.la-modal{grid-template-columns:1fr;gap:20px;max-width:360px;padding:23px}.la-modal__capa{display:none}.la-modal__conteudo h2{font-size:25px}.la-estante--compacta{padding:14px}}
+@media(prefers-reduced-motion:reduce){.la-livro{transition:none}.la-livro:hover{transform:none}}
+
+/* === LITERALURA-V30-ILUSTRADO-INICIO — preserva o restante da interface === */
+.la-estante{padding:27px 32px 27px;background:radial-gradient(ellipse 70% 70% at 50% 18%,#2a396733,transparent 74%)}
+.la-estante__intro{margin-bottom:20px}
+.la-estante__intro h3{font-size:27px;color:#f6e9d2;letter-spacing:-.7px}
+.la-estante__intro p{font-size:13px}
+.la-estante__micro{color:#c4abff}
+.la-estante__grade{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px;max-width:1080px}
+.la-livro{border-radius:16px;background:linear-gradient(155deg,#172743,#101c35);border-color:#35476b;max-width:355px}
+.la-livro__visual{min-height:307px;padding:13px 12px 10px;align-items:center;background:radial-gradient(circle at 50% 16%,#53638635,transparent 68%)}
+.la-capa--ilustrada{display:block;position:relative;width:225px;height:274px;padding:0;border-radius:5px 9px 8px 5px;object-fit:fill;max-width:100%;background:#22283b;border:1px solid #cdb3836e;box-shadow:-6px 9px 18px #01040ca6,0 0 0 1px #e6ce9350,inset 6px 0 3px #0007}
+.la-livro__visual .la-capa:not(.la-capa--ilustrada){width:206px;height:268px}
+.la-livro__favoritar{top:18px;right:19px;width:37px;height:37px;background:#101a2be7;z-index:1}
+.la-livro__conteudo{padding:16px 20px 19px;gap:7px}
+.la-livro__conteudo h4{font-size:19px;color:#fff8ec;letter-spacing:-.25px}
+.la-livro__selo{color:#cbb2ff}
+.la-livro__detalhes{padding:12px 13px;border-radius:9px;background:linear-gradient(115deg,#343062,#28264d);border-color:#897cd1;color:#fff}
+.la-livro__detalhes:hover{background:linear-gradient(115deg,#534c91,#373167)}
+.la-modal__capa .la-capa--ilustrada{width:224px;height:281px}
+.la-estante__filtro{border-color:#646080}
+.page-heading--biblioteca{min-height:137px;padding:15px 18px 15px 0;position:relative;isolation:isolate}
+.page-heading--biblioteca::before{content:"";position:absolute;inset:-24px 0 -5px 27%;z-index:-1;background:radial-gradient(ellipse at 62% 50%,#26234b75,transparent 68%),url('/literalura/cabecalho-livros.svg') no-repeat 65% center/auto 175px;opacity:.68;pointer-events:none}
+.page-heading--biblioteca h1{font-family:Georgia,'Times New Roman',serif;font-size:38px;color:#f4ead5;letter-spacing:-.9px}
+.page-heading--biblioteca .eyebrow{color:#c5aeff}
+.panel:has(>.la-estante)>.panel-heading{padding:20px 30px;background:#152138}
+.panel:has(>.la-estante)>.panel-heading h2{font-family:Georgia,'Times New Roman',serif;font-size:21px;color:#f1e9dd}
+.panel:has(>.la-estante)>.panel-heading h2::before{content:'▤';font-family:Arial,sans-serif;display:inline-block;margin-right:15px;color:#8b85fa}
+.panel:has(>.la-estante) .search{width:min(510px,100%)}
+@media(max-width:950px){.la-estante__grade{grid-template-columns:repeat(auto-fill,minmax(216px,1fr))}.page-heading--biblioteca::before{opacity:.38}}
+@media(max-width:650px){.page-heading--biblioteca{min-height:95px}.page-heading--biblioteca::before{opacity:.24;background-size:auto 128px}.page-heading--biblioteca h1{font-size:27px}.la-estante{padding:17px 12px}.la-estante__intro h3{font-size:23px}.la-estante__grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.la-livro{max-width:none}.la-livro__visual{min-height:190px;padding:12px 5px 7px}.la-capa--ilustrada{width:min(100%,124px);height:166px}.la-livro__visual .la-capa:not(.la-capa--ilustrada){width:121px;height:166px}.la-livro__favoritar{right:7px;top:7px;width:30px;height:30px}.la-livro__conteudo{padding:12px 10px}.la-livro__conteudo h4{font-size:15px}.panel:has(>.la-estante)>.panel-heading{padding:18px 14px}}
+/* === LITERALURA-V30-ILUSTRADO-FIM === */

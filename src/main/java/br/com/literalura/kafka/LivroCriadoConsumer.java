@@ -17,9 +17,11 @@ public class LivroCriadoConsumer {
             LoggerFactory.getLogger(LivroCriadoConsumer.class);
 
     private final ObjectMapper objectMapper;
+    private final KafkaMonitoramentoService monitoramento;
 
-    public LivroCriadoConsumer(ObjectMapper objectMapper) {
+    public LivroCriadoConsumer(ObjectMapper objectMapper, KafkaMonitoramentoService monitoramento) {
         this.objectMapper = objectMapper;
+        this.monitoramento = monitoramento;
     }
 
     @KafkaListener(
@@ -31,5 +33,6 @@ public class LivroCriadoConsumer {
                 objectMapper.readValue(mensagem, LivroCriadoEvent.class);
 
         log.info("kafka_event_consumed livroId={}", evento.id());
+        monitoramento.registrar("CONSUMIDO", evento);
     }
 }
