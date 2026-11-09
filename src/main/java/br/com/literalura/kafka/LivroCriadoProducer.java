@@ -22,12 +22,15 @@ public class LivroCriadoProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final ObjectMapper objectMapper;
+    private final KafkaMonitoramentoService monitoramento;
 
     public LivroCriadoProducer(
             KafkaTemplate<String, String> kafkaTemplate,
-            ObjectMapper objectMapper) {
+            ObjectMapper objectMapper,
+            KafkaMonitoramentoService monitoramento) {
         this.kafkaTemplate = kafkaTemplate;
         this.objectMapper = objectMapper;
+        this.monitoramento = monitoramento;
     }
 
     @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
@@ -38,16 +41,16 @@ public class LivroCriadoProducer {
             kafkaTemplate.send(TOPICO, String.valueOf(evento.id()), json)
                     .whenComplete((resultado, erro) -> {
                         if (erro != null) {
-                            log.error("kafka_publish_failed livroId={}",
-                                    evento.id(), erro);
+                            log.error("kafka_publish_failed livroId={}", evento.id(), erro);
+                            monitoramento.registrar("FALHA_ENVIO", evento);
                         } else {
-                            log.info("kafka_event_published livroId={}",
-                                    evento.id());
+                            log.info("kafka_event_published livroId={}", evento.id());
+                            monitoramento.registrar("PUBLICADO", evento);
                         }
                     });
         } catch (Exception erro) {
-            log.error("kafka_publish_failed livroId={}",
-                    evento.id(), erro);
+            log.error("kafka_publish_failed livroId={}", evento.id(), erro);
+            monitoramento.registrar("FALHA_ENVIO", evento);
         }
     }
 }
