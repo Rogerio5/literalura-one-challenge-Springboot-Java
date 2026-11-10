@@ -33,6 +33,13 @@
 
 > As imagens são capturas do ambiente local. O frontend V3.0 ainda **não possui URL pública**; `localhost:5180` funciona somente no computador que executa o projeto.
 
+## 📊 Evidência de observabilidade — Grafana e Prometheus
+
+A LiterAlura V3.0 possui métricas reais da API Spring Boot coletadas pelo **Prometheus** e visualizadas no **Grafana**, incluindo disponibilidade, requisições por minuto, erros HTTP 5xx, tempo de resposta, conexões PostgreSQL e memória da JVM.
+
+Na captura de **09/11/2026**, no período selecionado de **30 minutos**, o dashboard exibia **API UP (1)**, aproximadamente **4 requisições/min**, **0 erros HTTP 5xx/min** e **41,6 MiB de heap JVM**. São valores observados naquele momento, não garantias de desempenho nem disponibilidade futura.
+
+![Captura real do dashboard Grafana com métricas da API LiterAlura](docs/evidencias/literalura-v3/08-grafana-observabilidade-v30.png)
 ## 🎯 Funcionalidades
 
 - Cadastro e listagem de **autores** e **livros** por API REST, com persistência em PostgreSQL.

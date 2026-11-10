@@ -12,3 +12,6 @@ As quatro imagens nesta pasta são capturas de tela do projeto fornecidas durant
 A V2.3 registrou **11 testes PASS** no Maven e GitHub Actions success; verificar a documentação do projeto e [execução CI](https://github.com/Rogerio5/literalura-one-challenge-Springboot-Java/actions/runs/42698231437).
 
 Essas imagens documentam o estado em que foram capturadas. Não implicam que o histórico de eventos Kafka seja persistente, nem substituem testes automatizados futuros.
+## Evidencia complementar - Grafana
+
+- **08-grafana-observabilidade-v30.png**: Captura real das metricas da API no Grafana.
