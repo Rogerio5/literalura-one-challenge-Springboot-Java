@@ -9,7 +9,7 @@
 
 **Catálogo de autores e livros com API REST Java, frontend React, persistência PostgreSQL, eventos assíncronos Kafka e observabilidade.**
 
-**Versão V3.0:** interface e integração validadas localmente; publicação no GitHub em preparação via Pull Request. A versão consolidada na `main` permanece V2.3 até o merge.
+A interface e integração validadas localmente; publicação no GitHub em preparação via Pull Request. A versão consolidada na `main` permanece V2.3 até o merge.
 
 **Destaques:** catálogo ilustrado com capas próprias, cadastro de livros e autores, Kafka Producer/Consumer, monitoramento em tempo real e documentação para portfólio.
 
